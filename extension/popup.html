@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>ChromeAI Navigator</title>
+    <style>
+      body { font-family: system-ui, Arial, sans-serif; min-width: 280px; margin: 12px; }
+      h2 { margin: 0 0 8px; font-size: 16px; }
+      button { display: block; margin: 6px 0; width: 100%; padding: 8px; }
+      .row { display: flex; gap: 8px; align-items: center; }
+      select { flex: 1; padding: 6px; }
+      #output { margin-top: 10px; font-size: 0.95em; white-space: pre-wrap; }
+      .hint { color: #666; font-size: 12px; margin-top: 6px; }
+      #status { margin-top: 6px; font-size: 12px; color: #555; }
+      #mode { font-size: 12px; color: #666; margin-bottom: 8px; }
+      a { color: #3b82f6; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <h2>ChromeAI Navigator</h2>
+    <div id="mode">Mode: detecting… • <a href="#" id="openOptions">Options</a></div>
+
+    <button id="summarize">Summarize</button>
+    <button id="proofread">Proofread</button>
+    <button id="rewrite">Rewrite</button>
+
+    <div class="row">
+      <select id="translateTo">
+        <option value="en">English</option>
+        <option value="es">Spanish (es)</option>
+        <option value="fr">French (fr)</option>
+        <option value="de">German (de)</option>
+        <option value="hi">Hindi (hi)</option>
+        <option value="ja">Japanese (ja)</option>
+        <option value="ko">Korean (ko)</option>
+        <option value="pt">Portuguese (pt)</option>
+        <option value="zh">Chinese (zh)</option>
+      </select>
+      <button id="translate">Translate</button>
+    </div>
+
+    <button id="compose">Compose</button>
+
+    <div id="status"></div>
+    <div id="output"></div>
+    <div class="hint">Tip: select text on the page, then click a button. On first use in Chrome, you might need a second click while the model downloads. If on Comet, set an API key in Options for cloud fallback.</div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

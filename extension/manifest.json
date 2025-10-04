@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "ChromeAI Navigator",
+  "version": "1.3.0",
+  "description": "Summarize, Proofread, Rewrite, Translate, Compose on-device with Chrome’s built-in AI (Gemini Nano). Falls back to cloud if unavailable.",
+  "permissions": ["scripting", "activeTab", "tabs", "storage"],
+  "host_permissions": ["https://api.openai.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png" }
+  },
+  "background": { "service_worker": "background.js" },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "options_page": "options.html"
+}

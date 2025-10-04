@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>ChromeAI Navigator – Options</title>
+  <style>
+    body{font-family:system-ui,Arial;margin:20px;max-width:560px}
+    label{display:block;margin-top:12px}
+    input,button{padding:8px;width:100%}
+    small{color:#666}
+  </style>
+</head>
+<body>
+  <h2>API Settings (Cloud Fallback)</h2>
+  <p>If on-device AI isn’t available (e.g., in Comet), we’ll use this API for fallback.</p>
+
+  <label>OpenAI API Key
+    <input id="apiKey" type="password" placeholder="sk-..." autocomplete="off"/>
+  </label>
+  <label>Model
+    <input id="model" type="text" value="gpt-4o-mini"/>
+  </label>
+  <button id="save">Save</button>
+  <small id="status"></small>
+
+  <script src="options.js"></script>
+</body>
+</html>
